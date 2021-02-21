@@ -1,4 +1,4 @@
-# Weather-App
+# Weather-App :sunny:
 
 ![NY Image](docs/weather_app_ny.PNG)
 
@@ -14,9 +14,9 @@ The app communicates with the [OpenWeather](https://openweathermap.org/) API to 
 To use it, just type in the name of a city and click on the "Search Weather" button. If the name is invalid, a message box is displayed.
 
 The info displayed is:
-- City and Country name;
-- Weather description and icon;
-- Temperatures (current, min and max);
+- City and Country name; :earth_africa:
+- Weather description and icon; :partly_sunny:
+- Temperatures (current, min and max); :fire:
 
 ![Menu Image](docs/weather_app.PNG)
 
