@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+		<link rel="stylesheet" href="{{ url_for('static',filename='styles.css') }}" />
+		<title>Weather with Jesus</title>
+	</head>
+	<body>
+		<div class="app-wrap">
+			<main>
+				<form action="#" method="post">
+					<p><input type="text" name="city" placeholder="Search city..." /><input type="submit" value="Search"/></p>
+				</form>
+				{% if city %}
+					<h1 class="city">
+						{{city}}, {{country}}
+						<img src="https://www.countryflags.io/{{country.lower()}}/flat/64.png">
+					</h1>
+					<img src="http://openweathermap.org/img/wn/{{icon}}@2x.png"/>
+					<h2 class="weather">{{weather}}</h2>
+					<h2 class="temp">{{temp}} °C</h2>
+				{% else %}
+					<h1 class="city">City, Country</h1>
+					<img src="http://openweathermap.org/img/wn/01d@2x.png"/>
+					<h2 class="weather">Weather</h2>
+					<h2 class="temp">Temperature</h2>
+				{% endif %}
+			</main>
+		</div>
+	</body>
+</html>
